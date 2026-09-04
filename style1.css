@@ -1,0 +1,18 @@
+/*Jag lägger margin 0 för att ta bort de inbyggda marginalerna på sidorna som webbläsaren har, jag lägger 100vh för att få hela skärmens höjd.
+sedan väljer jag display grid för att kunna använda grid columns & rows. Columns skapara två kolumner som delar lika på bredden & rows gör
+likadant fast på höjden. FR betyder andel av tillgängligt utrymme och tar därför allt utrymme som finns på skärmen. 
+Jag använder sedan nth child istället för 4 klasser för att enklare kunna byta färger om jag vill och det är enklare att se postionen
+på vilken färg som sitter vart. */ 
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+}
+
+.ruta:nth-child(1){ background-color: red;}
+.ruta:nth-child(2){ background-color: blue;}
+.ruta:nth-child(3){ background-color: green;}
+.ruta:nth-child(4){ background-color: yellow;}

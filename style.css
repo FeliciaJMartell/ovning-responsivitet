@@ -1,0 +1,31 @@
+body {
+    background-color: white;
+}
+
+
+/*Jag lägger till margin 0 auto (auto delar upp överskottet på varsin sida) så att rektangeln hamnar i mitten av sidan.
+Eftersom att cirkeln är ett barn till rektangeln (eftersom de ligger så i html koden)
+så lägger jag reglerna i föräldern, när jag la till display flex på rektangeln så blev barnet ett flexbarn som flexbox reglerna styr över 
+Lägger till justify och align för att få cirkeln att ligga i mitten av rektangeln.
+använder width 80% på rektangeln så att den blev lite större på sidan. Jag tog 49% på cirkeln så att den nästan nuddar kanterna på rektangeln.
+Cirkelns width räknas på rektangelns bredd eftersom rektangeln är förälder.
+Jag använder aspect-ratio så att den låser proportionena och bevarar formerna trots att bredden ändras.*/
+
+
+.rektangel {
+    width: 80%;
+    aspect-ratio: 2/1;
+    background-color: rgb(45, 140, 172);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cirkel {
+    width: 49%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgb(175, 173, 36);
+
+}
